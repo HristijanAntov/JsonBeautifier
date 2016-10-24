@@ -1,9 +1,44 @@
  <html>
      <head>
          <link rel="stylesheet" href="ui.css">
+         <style>
+             /* PREOPTOVARENI TIPOVI  ZA JSON TIPOVITE*/ 
+             .json-key {
+                 color: #03a9f4;
+             }
+             .json-number {
+                 color: pink;
+             }
+             .json-string {
+                 color: #ff4e17;
+             }
+             .json-boolean {
+                 color: #fdf18c;
+             }
+         </style>
      </head>
      <body>
-        
+        <div class="app">
+            <div class="panel"> 
+                    <label class="title">Enter your json
+                        
+                        <button class="format" onclick="formatTo(document.getElementById('input').value)">Format</button> 
+                    </label>
+                <textarea class="content" spellcheck="false" id="input">
+                    [{"id":1,"first_name":"Judy","last_name":"Martin","email":"jmartin0@mac.com","gender":"Female","ip_address":"87.32.15.228"},{"id":2,"first_name":"Harry","last_name":"West","email":"hwest1@privacy.gov.au","gender":"Male","ip_address":"64.76.133.230"},{"id":3,"first_name":"Nancy","last_name":"Walker","email":"nwalker2@youku.com","gender":"Female","ip_address":"209.229.189.153"}]
+                </textarea>
+            </div>
+            <div class="panel">
+                <label class="title">Output</label>
+                <pre class="content" spellcheck="false" style="overflow: auto;" id="output"></pre>
+            </div>
+        </div> 
      <script src="json-formatter.js"></script>
+     <script>
+         function formatTo(json) {
+             var formatted = format(JSON.parse(json));
+             document.getElementById("output").innerHTML = formatted;
+         }
+     </script>
      </body>
  </html>

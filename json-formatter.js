@@ -39,7 +39,7 @@
             template += Object.keys(node).map((key) => {
                 let childNode = node[key]
 
-                return `${spaces(indent)}<span class="json-key">"${key}"</span>:${format(childNode,indent + 4)}`
+                return `${spaces(indent)}<span   class="json-key">"${key}"</span>:    ${format(childNode,indent + 4)}`
             }).join(',\n')
 
             template += '\n' + spaces(indent - 4) +'}'
