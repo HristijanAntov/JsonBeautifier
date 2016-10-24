@@ -1,2 +1,2 @@
 # JsonBeautifier
-A Json formating recursive algorithm written in a few lines of code
+A Json formatting recursive algorithm written in a few lines of code
